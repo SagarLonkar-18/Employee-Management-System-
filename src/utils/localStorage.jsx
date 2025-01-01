@@ -224,5 +224,6 @@ export const getLocalStorage = () => {
     const admin = JSON.parse(localStorage.getItem('admin'));
     // by default gives in form of string , parse method will give data as it was in file in form of object
     // console.log(JSON.parse(employees));
-    console.log(employees, admin)
+    // console.log(employees, admin)
+    return {employees,admin};
 } 

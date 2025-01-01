@@ -1,14 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
-const Login = () => {
+const Login = ({handleLogin}) => {
 
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
     
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log("Email is ",email)
-        console.log("Password is ",password)
+        // passing data from child to parent in App.jsx
+        handleLogin(email,password);
+        // console.log("Email is ",email)
+        // console.log("Password is ",password)
         setEmail("");
         setPassword("");
     }
