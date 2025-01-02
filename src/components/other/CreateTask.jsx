@@ -1,6 +1,10 @@
 import React from 'react'
+import { setLocalStorage } from '../../utils/localStorage'
 
 const CreateTask = () => {
+
+    
+
     return (
         <div className='px-8 mx-8 bg-[#1C1C1C] mt-5 rounded'>
             <form className='flex flex-wrap w-full items-start justify-between px-2 py-4'>
