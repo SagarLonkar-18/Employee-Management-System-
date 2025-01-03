@@ -12,7 +12,7 @@ const App = () => {
   //   // getLocalStorage();
   // },)
 
-  const authData = useContext(AuthContext)
+  const [userData,setUserData] = useContext(AuthContext)
   // console.log(authData)
   // console.log(authData.employees)
   // console.log(authData.admin)
@@ -45,8 +45,8 @@ const App = () => {
         setUser('admin');
         localStorage.setItem("loggedInUser",JSON.stringify({role:'admin'}));
       }
-      else if(authData){
-        const employee = authData.employees.find((e)=>email == e.email && e.password == password);
+      else if(userData){
+        const employee = userData.find((e)=>email == e.email && e.password == password);
         if(employee){
           setUser('employee');
           setLoggedInUserData(employee);
